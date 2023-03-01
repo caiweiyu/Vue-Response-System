@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      input{
+        width: 200px;
+        height: 40px;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+      }
+      .box{
+        display: flex;
+        align-items: center;
+      }
+    </style>
+</head>
+<body>
+    <div id="app">
+      <div class="box">vue核心双向数据绑定及响应系统</div>
+      <div class="box">vm实例data的msg:  <div>{{msg}}</div></div>
+      <div class="box">v-text:  <div v-text="msg"></div></div>
+      <div class="box">v-model:  <input v-model="msg" type="text" /></div>
+    </div>
+      <script src="./dep.js"></script>
+      <script src="./watcher.js"></script>
+      <script src="./compiler.js"></script>
+      <script src="./observer.js"></script>
+      <script src="./vue.js"></script>
+      <script>
+        let vm = new Vue({
+          el: '#app',
+          data: {
+            msg: '123',
+          },
+        })
+      </script>
+  </body>
+
+</html>
